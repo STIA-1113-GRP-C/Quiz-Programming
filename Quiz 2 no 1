@@ -1,0 +1,87 @@
+package quiz_2;
+import java.util.Scanner;
+public class no_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int year,age;
+		double salary,m_salary, net,highest = 0, lowest = 99999;
+		double higher = 0, low = 999;
+		System.out.println("Enter your salary: ");
+		salary = sc.nextDouble();
+		System.out.println("Please enter year of service : ");
+		year = sc.nextInt();
+		
+		if(year > 5)
+			net = 0.05 * salary;
+		else
+			net = 0;
+		System.out.println("The net bonus is " + net);
+		
+		for(int i = 0; i < 12; i++) {
+		System.out.println("Please enter your monthly salary : ");
+		m_salary = sc.nextDouble();
+		if(m_salary > highest)
+			m_salary = highest;
+		if(m_salary < lowest)
+			m_salary = lowest;
+		}
+		System.out.println("The highest salary is " + highest);
+		System.out.println("The lowset salary is " + lowest);
+		
+		for(int j = 0; j<3; j++) {
+			System.out.println("please enter your age : ");
+			age = sc.nextInt();
+      if  ( age > higher)
+          age = higher;
+      if (age < low)
+          age = low;
+			
+			System.out.println("Older : " + higher);
+			System.out.println("youngest : " + low);
+		}
+	}
+
+}
+output
+Enter your salary: 
+2000
+Please enter year of service : 
+6
+The net bonus is 100.0
+Please enter your monthly salary : 
+2000
+Please enter your monthly salary : 
+6000
+Please enter your monthly salary : 
+5000
+Please enter your monthly salary : 
+4675
+Please enter your monthly salary : 
+6753
+Please enter your monthly salary : 
+5745
+Please enter your monthly salary : 
+5463
+Please enter your monthly salary : 
+3564
+Please enter your monthly salary : 
+3786
+Please enter your monthly salary : 
+3683
+Please enter your monthly salary : 
+3863
+Please enter your monthly salary : 
+8369
+The highest salary is 0.0
+The lowset salary is 99999.0
+please enter your age : 
+21
+please enter your age :
+22
+please enter your age :
+23
+Older : 23
+youngest : 21
+ 
